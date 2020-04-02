@@ -7,9 +7,8 @@ from .forms import RegisterForm, LoginForm
 def index(request):
     return render(request, 'accounts/index.html')
 
+
 # 註冊
-
-
 def sign_up(request):
 
     form = RegisterForm()
@@ -46,3 +45,10 @@ def sign_in(request):
     }
 
     return render(request, 'accounts/login.html', context)
+
+
+# 登出
+def log_out(request):
+
+    logout(request)
+    return redirect('/accounts/login')
