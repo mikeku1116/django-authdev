@@ -3,9 +3,12 @@
 {% block content %}
 
 <form action="" method="POST">
+    {% csrf_token %}
 
-{{ form }}
+    {{ form }}
 
+    <br />
+    <input type="submit" class="btn btn-success" value="儲存">
 </form>
 
 {% endblock  %}
