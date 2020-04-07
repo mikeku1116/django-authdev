@@ -2,7 +2,7 @@
 
 ## 專案介紹 ##
 
-本專案AuthDev用來簡單示範如何利用Django的UserCreationForm及Form類別，來開發網站的登入驗證和註冊功能，可以搭配[[Django教學8][Django教學8]Django UserCreationForm實作網站登入驗證及註冊功能分享](https://www.learncodewithmike.com/2020/04/django-authentication-and-usercreationform.html)部落格文章來進行學習。
+本專案AuthDev用來簡單示範如何利用Django的UserCreationForm及Form類別，來開發網站的登入驗證和註冊功能，可以搭配[[Django教學8]Django UserCreationForm實作網站登入驗證及註冊功能分享](https://www.learncodewithmike.com/2020/04/django-authentication-and-usercreationform.html)部落格文章來進行學習。
 
 ## 前置作業 ##
 
