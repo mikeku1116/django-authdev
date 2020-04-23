@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
+    path('', include('accounts.urls')),  # 自己的應用程式網址
+    path('accounts/', include('allauth.urls')),  # django-allauth網址
 ]

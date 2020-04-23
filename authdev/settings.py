@@ -37,7 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts.apps.AccountsConfig'
+
+    # 自己的應用程式
+    'accounts.apps.AccountsConfig',
+
+    # allauth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # google provider
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +130,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+SITE_ID = 1
