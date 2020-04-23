@@ -19,7 +19,7 @@ def sign_up(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/accounts/login')
+            return redirect('/login')
 
     context = {
         'form': form
@@ -40,7 +40,7 @@ def sign_in(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('/accounts')  # 導向到首頁
+            return redirect('/')  # 導向到首頁
 
     context = {
         'form': form
@@ -53,4 +53,4 @@ def sign_in(request):
 def log_out(request):
 
     logout(request)
-    return redirect('/accounts/login')
+    return redirect('/login')
