@@ -4,6 +4,11 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm, LoginForm
 
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.template.loader import render_to_string
+
+
 # 首頁
 @login_required(login_url="Login")
 def index(request):
@@ -19,6 +24,23 @@ def sign_up(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
+
+            # 電子郵件內容樣板
+            email_template = render_to_string(
+                'accounts/signup_success_email.html',
+                {'username': request.user.username}
+            )
+
+            email = EmailMessage(
+                '註冊成功通知信',  # 電子郵件標題
+                email_template,  # 電子郵件內容
+                settings.EMAIL_HOST_USER,  # 寄件者
+                ['demo@gmail.com']  # 收件者
+            )
+
+            email.fail_silently = False
+            email.send()
+
             return redirect('/login')
 
     context = {
