@@ -4,7 +4,9 @@
 
 本專案AuthDev用來簡單示範如何利用Django的UserCreationForm及Form類別，來開發網站的登入驗證和註冊功能，可以搭配[[Django教學8]Django UserCreationForm實作網站登入驗證及註冊功能分享](https://www.learncodewithmike.com/2020/04/django-authentication-and-usercreationform.html)部落格文章來進行學習。
 
-另外，Google登入的機制，是利用django-allauth套件來進行整合開發，其中的實作方式可以搭配[[Django教學13]Django Allauth套件整合Google登入驗證實作教學](https://www.learncodewithmike.com/2020/04/django-allauth-google.html)部落格文章來進行學習。
+另外，Google登入的機制，是利用django-allauth套件來進行整合開發，在執行網站前，需先搭配[[Django教學13]Django Allauth套件整合Google登入驗證實作教學](https://www.learncodewithmike.com/2020/04/django-allauth-google.html)部落格文章，在Django Administration的部分，進行Google登入的相關設定，才不會發生錯誤。
+
+在註冊成功時，會透過Gmail所提供的SMTP伺服器來發送通知信，同樣在執行時，需事先進行SMTP的設定，可以搭配[[Django教學16]建構Django網站該知道的Email寄送方式](http://www.learncodewithmike.com/2020/05/django-send-email.html)部落格文章來進行學習。
 
 ## 前置作業 ##
 
